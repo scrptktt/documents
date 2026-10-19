@@ -1,0 +1,39 @@
+## This is an example of a default syntax.  The default syntax is used for
+## files that do not match any other syntax.
+syntax default
+comment "#	"
+# Spaces in front of tabs.
+color ,red " +	+"
+# Nano's release motto, then name plus version.
+color italic,lime "\<[Nn]ano [1-9]\.[0-9][-.[:alnum:]]* "[^"]+""
+color brightred "\<(GNU )?[Nn]ano [1-9]\.[0-9][-.[:alnum:]]*\>"
+# Dates
+color latte "\<[12][0-9]{3}\.(0[1-9]|1[012])\.(0[1-9]|[12][0-9]|3[01])\>"
+# Email addresses.
+color magenta "<[[:alnum:].%_+-]+@[[:alnum:].-]+\.[[:alpha:]]{2,}>"
+# URLs.
+color lightblue "\<https?://\S+\.\S+[^])>[:space:],.]"
+# Bracketed captions in certain config files.
+color brightgreen "^\[[^][]+\]$"
+# ~ multiple (of the same+ | of any*)
+# Make hard (non-breaking) spaces noticeable.
+color ,#444 " "
+# Control codes.
+color orange "[[:cntrl:]]"
+# Comments.
+# color cyan "^.*[[:blank:]]*#.*$"
+color cyan,#222 "(#[[:blank:]].*)*?"
+color bold,red,#333 "(##[[:blank:]].*)*?"
+color bold,#6df "(\+[[:blank:]].*)*?"
+color bold,#fdf "(-[[:blank:]].*)*?"
+color #f00,#222 "(~[[:blank:]].*)*?"
+
+color ,normal "(\+|-|~)"
+color ,normal "	"
+color cyan,normal "#"
+color red,normal "##"
+color bold,#6df "\+"
+color bold,#fdf "-"
+color bold,red "~"
+
+color ,#9c9 "eighth bit"
